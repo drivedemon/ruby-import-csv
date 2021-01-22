@@ -1,4 +1,4 @@
-.container.team-detail
+.container.mb-3
   .row.justify-content-center
     .col-8.text-center.p-0.mt-3.mb-2
     .col-8
@@ -24,4 +24,5 @@
             tbody
               - @users.each do |user|
                 = render "user", user: user
-          = will_paginate @users
+          .digg_pagination.mb-3
+            = will_paginate @users

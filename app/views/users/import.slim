@@ -1,9 +1,21 @@
 .container.team-detail
   .row.justify-content-center
-    .col-12.text-center.p-0.mt-3.mb-2
+    .col-8.text-center.p-0.mt-3.mb-2
       .card.px-4.pt-4.pb-0.mt-3.mb-3
         .row
           .col-6.justify-content-start.d-flex.pr-0
-            h2 style="margin-bottom: 0px" = "Import CSV"
-          button.btn-btn-primary = "sss"
+            h2.mb-0 = "Import CSV"
         hr
+        .row
+          .col-12.justify-content-start.d-flex.pr-0
+            = form_for :user, :url => import_csv_path, html: {id: "msform"} do |f|
+              .row.justify-content-center.mb-3
+                .form-group
+                  .col-12.form-control.mt-1
+                    = f.file_field :prospect_file, accept: '.csv'
+                  .form-group
+                    .col-12
+                      = f.label :mw_campaign_file, "Supported file format only .csv"
+                .form-group
+                  .col-3
+                    = f.submit "Import", name: "Import", class: "btn btn-primary", style: "float: left; margin-top: 4px;"

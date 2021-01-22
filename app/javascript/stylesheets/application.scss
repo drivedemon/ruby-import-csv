@@ -3,5 +3,9 @@
 $success: #03d182;
 $danger: #ed2f14;
 
-@import './bootstrap_custom.scss';
+@import "~bootstrap/scss/bootstrap";
 @import './navigation.scss';
+
+.form-control {
+  padding: 0.2rem 0.5rem;
+}

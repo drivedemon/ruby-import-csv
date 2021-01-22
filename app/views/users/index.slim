@@ -1,2 +1,27 @@
-h1 Users#index
-p Find me in app/views/users/index.slim
+.container.team-detail
+  .row.justify-content-center
+    .col-8.text-center.p-0.mt-3.mb-2
+    .col-8
+      - flash.each do |key, value|
+        - class_name = key == 'success' ? 'success' : 'danger'
+        = content_tag :div, key, class: "flash alert alert-#{class_name} #{value}"
+      .card.px-4.pt-4.pb-0.mt-3.mb-3
+        .row
+          .col-6.justify-content-start.d-flex.pr-0
+            h2.mb-0 = "Users"
+        hr
+        .row
+          .col-12.justify-content-start.d-flex.pr-0
+          table.table.table-striped
+            thead
+              tr
+                th scope="col"
+                  = "ID"
+                th scope="col"
+                  = "Username"
+                th scope="col"
+                  = "Level"
+            tbody
+              - @users.each do |user|
+                = render "user", user: user
+          = will_paginate @users

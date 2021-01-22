@@ -1,0 +1,2 @@
+class LogImportFile < ApplicationRecord
+end

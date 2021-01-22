@@ -1,0 +1,17 @@
+.container-fluid
+  .searchbox-wrapper
+    .row.align-items-center
+      .col-6
+      ul.nav.flex-column
+        li.nav-item
+        = link_to '/', class: "nav-link h2 m-0 font-weight-bold ml-2 mt-3" do
+          span.text-dark IMPORT CSV
+  .row
+    nav#sidebarMenu.col-md-3.col-sm-4.col-lg-2.d-md-block.sidebar.sidebar-wrapper
+      .sidebar-sticky.pt-3
+        ul.nav.flex-column
+          li.nav-item
+          = link_to users_path, class: "nav-link h2 m-0 font-weight-bold ml-2 mt-3" do
+            span.text-white = t("dashboard.navbar.user_list")
+    main.col-md-9.ml-sm-auto.col-sm-8.col-lg-10.no-padding role="main"
+      = yield

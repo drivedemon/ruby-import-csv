@@ -36,7 +36,7 @@ All required Dependencies please see in document:
 ```
 https://gorails.com/setup/osx/11.0-big-sur
 ```
-PS: For Background Job foler structure
+PS: For Background Job folder structure (Example file format: `user_example.csv`)
 ```
-please create folder csv (~/csv/your_file.csv) then upload your file into that folder 
+please create folder csv (~/csv/your_file.csv) then upload your file into that folder
 ```

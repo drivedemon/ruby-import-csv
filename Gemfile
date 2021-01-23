@@ -30,7 +30,9 @@ gem 'jquery-rails'
 gem 'aws-sdk-s3', '~> 1'
 gem 'will_paginate', '~> 3.1.0'
 gem 'sidekiq'
+gem 'sidekiq-scheduler'
 gem 'toastr-rails'
+gem 'dotenv-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

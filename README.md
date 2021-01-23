@@ -36,3 +36,4 @@ All required Dependencies please see in document:
 ```
 https://gorails.com/setup/osx/11.0-big-sur
 ```
+PS: For Background Job please create folder `csv` then upload your file into that folder 
